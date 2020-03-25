@@ -1,0 +1,28 @@
+{
+  "dbtr": [
+    {
+    "fileNumber": "123456",
+    "firstName": "John",
+    "middleName": "A",
+    "lastName": "Doe",
+    "address": "123 Main St",
+    "address2": "Apt A",
+    "county": "Bronx",
+    "city": "Anywhere",
+    "state": "NY",
+    "zip": "12345"
+    },
+    {
+    "fileNumber": "654321",
+    "firstName": "Jane",
+    "middleName": "Z",
+    "lastName": "Smith",
+    "address": "555 Main St",
+    "address2": "Apt 99",
+    "county": "New York",
+    "city": "New York",
+    "state": "NY",
+    "zip": "13456"
+    }
+  ]
+}

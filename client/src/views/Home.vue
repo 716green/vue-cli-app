@@ -3,16 +3,16 @@
     <div class="home">
       <img alt="Vue logo" src="../assets/mevn.jpg" width="350" />
     </div>
-    <DebtorInfo />
+    <DebtorList />
   </div>
 </template>
 
 <script>
-import DebtorInfo from "@/components/DebtorInfo.vue";
+import DebtorList from "@/components/DebtorList.vue";
 
 export default {
   components: {
-    DebtorInfo
+    DebtorList
   }
 };
 </script>
