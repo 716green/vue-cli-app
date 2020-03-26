@@ -1,24 +1,25 @@
 <template>
   <div class="debtorCard">
+    <!-- <JsonImport v-bind:dbtrs="dbtrs"> -->
     <a class="cardLink" href="#">
-      <h3>
-        {{ debtors.fileNumber }} <br />{{ debtors.firstName }}
-        {{ debtors.lastName }}
-      </h3>
-      <h4>
-        {{ debtors.address }} {{ debtors.address2 }}<br />{{ debtors.city }},
-        {{ debtors.state }} {{ debtors.zip }}
-      </h4>
+      <JsonImport>
+        <p v-bind="dbtrs" v-for="dbtr in dbtrs" :key="dbtr.name">
+          {{ dbtrs }}
+        </p>
+      </JsonImport>
     </a>
   </div>
 </template>
 
 <script>
-//import dbtr from "@/dbtr.json";
+import JsonImport from "@/components/JsonImport.vue";
 export default {
   name: "DebtorInfo",
   props: {
-    dbtr: Object //Not In Use
+    dbtrs: Object //Not In Use
+  },
+  components: {
+    JsonImport
   },
   data() {
     return {
