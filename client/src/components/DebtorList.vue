@@ -1,25 +1,30 @@
 <template>
   <div class="debtorList">
     <h2>Debtors</h2>
-    <span class="debtorCards">
-      <DebtorCard />
-      <DebtorCard />
-      <DebtorCard />
-      <DebtorCard />
-      <DebtorCard />
-    </span>
+    <div class="debtorCards" v-for="dbtr in dbtrs">
+      <!-- <DebtorCard v-for="dbtr in dbtrs" /> -->
+      <DebtorCard> </DebtorCard>
+
+      <!-- </DebtorCard> -->
+    </div>
   </div>
 </template>
 
 <script>
 import DebtorCard from "@/components/DebtorCard.vue";
+import data from "@/assets/dbtr.json";
 export default {
-  name: "DebtorInfo",
+  name: "DebtorList",
   components: {
     DebtorCard
   },
-  props: {
-    dbtr: Object // not in use
+
+  computed: {
+    dbtrs() {
+      return data.dbtrs.map(item => {
+        return item;
+      });
+    }
   }
 };
 </script>
